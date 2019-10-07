@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<projectConfiguration>
+    <configVersion>2</configVersion>
+    <relativeTo>WORKSPACE</relativeTo>
+    <referencedLibrary type="PYTHON" name="Selenium2Library" path="C:/Users/srmurug/AppData/Local/Continuum/anaconda3/Lib/site-packages/Selenium2Library/__init__.py"/>
+    <pythonpath>
+        <path location="Locators"/>
+    </pythonpath>
+    <classpath/>
+    <variableFiles path="Flipkart_Testing/Locators/Variables.yaml"/>
+    <excludedForValidation/>
+    <isValidatedFileSizeCheckingEnabled>true</isValidatedFileSizeCheckingEnabled>
+    <validatedFileMaxSize>1024</validatedFileMaxSize>
+</projectConfiguration>

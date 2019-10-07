@@ -1,0 +1,26 @@
+Browser:    https://www.flipkart.com/
+LoginCancelButton:    //button[@class='_2AkmmA _29YdH8']
+SearchText:   //input[@type='text']
+ProductData:   //img[@class='_3togXc']
+PriceFilterClass:    //*[@class='_1YoBfV']
+PriceMaxFilter:    //*[@class='_1YoBfV']//*[@class='fPjUPw']
+BrandFilter:    (//div[@class='_1p7h2j'])[2]
+Filter1Xpath:    //div[@class='_2xEnNW']//div[1]/div[2]
+Filter2Xpath:    //div[@class='_2xEnNW']//div[2]/div[2]
+Product:    (//img[@class='_3togXc'])[1]
+ProductSize:    id=swatch-1-size
+BuyNow:    //button[@class='_2AkmmA _2Npkh4 _2kuvG8 _7UHT_c']
+SearchButton:    //button[@type='submit']
+Login:   //h3[@class='_1fM65H _2RMAtd']
+InputData:    shoes 
+Src:    src
+Data:   /shoe/
+Assertion1:    is not a Shoe
+PriceMaxValue:    '2000'
+Assertion2Data:    Min-₹2000
+Assertion3Data:    ADIDAS
+Assertion2:   Price Filter didn't meet expectation
+Assertion3:   Brand Filter didn't meet expectation
+Error1:    Price filter is not available
+Error2:   Size could not be selected
+Error3:    Out of Stock

@@ -1,0 +1,2656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20191007 10:59:49.166" rpa="false">
+<suite id="s1" name="Flipkart Testing" source="C:\FolderofSrinath\Work\Deepika\Flipkart_Testing">
+<suite id="s1-s1" name="Script" source="C:\FolderofSrinath\Work\Deepika\Flipkart_Testing\Script">
+<suite id="s1-s1-s1" name="FlipkartValidation" source="C:\FolderofSrinath\Work\Deepika\Flipkart_Testing\Script\FlipkartValidation.robot">
+<test id="s1-s1-s1-t1" name="Flipkart Webpage Search Validation">
+<kw name="Search Validation" library="SearchValidation">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${Browser}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20191007 10:59:49.509" level="INFO">Opening browser 'chrome' to base url 'https://www.flipkart.com/'.</msg>
+<status status="PASS" starttime="20191007 10:59:49.508" endtime="20191007 11:00:03.935"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${LoginCancelButton}</arg>
+</arguments>
+<msg timestamp="20191007 11:00:03.936" level="INFO">Clicking button '//button[@class='_2AkmmA _29YdH8']'.</msg>
+<status status="PASS" starttime="20191007 11:00:03.935" endtime="20191007 11:00:05.092"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SearchText}</arg>
+<arg>${InputData}</arg>
+</arguments>
+<msg timestamp="20191007 11:00:05.093" level="INFO">Typing text 'shoes' into text field '//input[@type='text']'.</msg>
+<status status="PASS" starttime="20191007 11:00:05.092" endtime="20191007 11:00:05.228"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20191007 11:00:06.653" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20191007 11:00:05.228" endtime="20191007 11:00:06.653"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${SearchButton}</arg>
+</arguments>
+<msg timestamp="20191007 11:00:06.654" level="INFO">Clicking button '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20191007 11:00:06.653" endtime="20191007 11:00:06.783"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ProductData}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:06.784" endtime="20191007 11:00:07.555"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20191007 11:00:07.941" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20191007 11:00:07.555" endtime="20191007 11:00:07.941"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<assign>
+<var>@{AllData}</var>
+</assign>
+<msg timestamp="20191007 11:00:07.942" level="INFO">@{AllData} = [ ]</msg>
+<status status="PASS" starttime="20191007 11:00:07.941" endtime="20191007 11:00:07.942"></status>
+</kw>
+<kw name="Get WebElements" library="Selenium2Library">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>${ProductData}</arg>
+</arguments>
+<assign>
+<var>${All_Data}</var>
+</assign>
+<msg timestamp="20191007 11:00:07.954" level="INFO">${All_Data} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="20351b23429eefb506dd471a47b2affd", element="6e802b61-d02a-40aa-8a42-9736a7e1de76")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20191007 11:00:07.942" endtime="20191007 11:00:07.954"></status>
+</kw>
+<kw name="${item} IN [ @{AllData} ]" type="for">
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;6e802b61-d02a-40aa-8a42-9736a7e1de76&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:07.962" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/js98x3k0/shoe/k/f/g/sc0192g-9-sparx-navyblueorange-original-imafdtcywzkfeejz.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:07.955" endtime="20191007 11:00:07.962"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:07.963" endtime="20191007 11:00:07.964"></status>
+</kw>
+<msg timestamp="20191007 11:00:07.964" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:07.963" endtime="20191007 11:00:07.964"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:07.965" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/js98x3k0/shoe/k/f/g/sc0192g-9-sparx-navyblueorange-original-imafdtcywzkfeejz.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:07.964" endtime="20191007 11:00:07.965"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:07.965" endtime="20191007 11:00:07.965"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:07.954" endtime="20191007 11:00:07.966"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;a64f2b96-3b38-404d-a3de-c6c503584070&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:07.974" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jn3hocw0/shoe/k/r/t/sx0414g-9-sparx-greyorange-original-imaf9v7dv6dpzhyv.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:07.966" endtime="20191007 11:00:07.974"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:07.975" endtime="20191007 11:00:07.975"></status>
+</kw>
+<msg timestamp="20191007 11:00:07.975" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:07.974" endtime="20191007 11:00:07.976"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:07.976" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jn3hocw0/shoe/k/r/t/sx0414g-9-sparx-greyorange-original-imaf9v7dv6dpzhyv.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:07.976" endtime="20191007 11:00:07.976"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:07.977" endtime="20191007 11:00:07.977"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:07.966" endtime="20191007 11:00:07.977"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;f48bc16c-85cf-4c05-8a0b-cd353ddc0b66&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:07.987" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jwaztzk0/shoe/w/b/y/1011a739-10-asics-triple-black-onyx-original-imafhfyqdhaazvzx.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:07.978" endtime="20191007 11:00:07.987"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:07.988" endtime="20191007 11:00:07.988"></status>
+</kw>
+<msg timestamp="20191007 11:00:07.988" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:07.988" endtime="20191007 11:00:07.989"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:07.989" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jwaztzk0/shoe/w/b/y/1011a739-10-asics-triple-black-onyx-original-imafhfyqdhaazvzx.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:07.989" endtime="20191007 11:00:07.989"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:07.989" endtime="20191007 11:00:07.990"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:07.978" endtime="20191007 11:00:07.990"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;7756eedd-a28c-415a-ac02-6aa31b147ede&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:07.997" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jur9nrk0/shoe/k/b/a/wonder-1313-7-asian-grey-orange-original-imaffbmzjc5hmagy.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:07.990" endtime="20191007 11:00:07.997"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:07.998" endtime="20191007 11:00:07.998"></status>
+</kw>
+<msg timestamp="20191007 11:00:07.998" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:07.997" endtime="20191007 11:00:07.998"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:07.999" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jur9nrk0/shoe/k/b/a/wonder-1313-7-asian-grey-orange-original-imaffbmzjc5hmagy.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:07.999" endtime="20191007 11:00:07.999"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:07.999" endtime="20191007 11:00:08.000"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:07.990" endtime="20191007 11:00:08.000"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;2081f968-683c-4557-8b79-437159874031&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.009" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/k0mqtu80/shoe/c/5/y/193261-9-puma-peacoat-white-original-imafkdp2uqkmgrkh.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.000" endtime="20191007 11:00:08.009"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.009" endtime="20191007 11:00:08.010"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.010" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.009" endtime="20191007 11:00:08.010"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.011" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/k0mqtu80/shoe/c/5/y/193261-9-puma-peacoat-white-original-imafkdp2uqkmgrkh.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.010" endtime="20191007 11:00:08.011"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.011" endtime="20191007 11:00:08.012"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.000" endtime="20191007 11:00:08.012"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;468835ad-7799-4d55-b324-28f0fbf597cd&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.021" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jyxaw7k0/shoe/z/g/f/dg-325-black-9-digitrendzz-black-original-imafgffgrnb2rkct.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.012" endtime="20191007 11:00:08.021"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.022" endtime="20191007 11:00:08.022"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.023" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.021" endtime="20191007 11:00:08.023"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.023" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jyxaw7k0/shoe/z/g/f/dg-325-black-9-digitrendzz-black-original-imafgffgrnb2rkct.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.023" endtime="20191007 11:00:08.024"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.024" endtime="20191007 11:00:08.024"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.012" endtime="20191007 11:00:08.024"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;d14a2227-7f5a-45e0-b197-4910084754b1&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.031" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jt8yxe80/shoe/f/u/y/cg-248-6-campus-blue-original-imafemfagmgfku7s.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.025" endtime="20191007 11:00:08.031"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.032" endtime="20191007 11:00:08.032"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.033" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.032" endtime="20191007 11:00:08.033"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.033" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jt8yxe80/shoe/f/u/y/cg-248-6-campus-blue-original-imafemfagmgfku7s.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.033" endtime="20191007 11:00:08.033"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.034" endtime="20191007 11:00:08.034"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.024" endtime="20191007 11:00:08.034"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;dce52ab9-0c32-4c6b-aed3-0e1027c4265f&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.041" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jwdupow0/shoe/z/c/g/cg-248-13-campus-blu-org-original-imafh2fpxwfecutj.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.035" endtime="20191007 11:00:08.041"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.041" endtime="20191007 11:00:08.042"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.042" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.041" endtime="20191007 11:00:08.042"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.042" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jwdupow0/shoe/z/c/g/cg-248-13-campus-blu-org-original-imafh2fpxwfecutj.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.042" endtime="20191007 11:00:08.043"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.043" endtime="20191007 11:00:08.043"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.034" endtime="20191007 11:00:08.043"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;d6bd7d51-992d-421d-aa08-96ba9a4be0b4&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.052" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jfyaf0w0/shoe/6/m/n/rsc032-12-red-tape-blk-original-imaf4aryghxaegft.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.044" endtime="20191007 11:00:08.052"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.053" endtime="20191007 11:00:08.053"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.054" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.052" endtime="20191007 11:00:08.054"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.054" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jfyaf0w0/shoe/6/m/n/rsc032-12-red-tape-blk-original-imaf4aryghxaegft.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.054" endtime="20191007 11:00:08.054"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.055" endtime="20191007 11:00:08.055"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.043" endtime="20191007 11:00:08.055"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;a9b0a644-f7e5-4a8c-b226-a2b0a4ee1246&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.062" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/k0mqtu80/shoe/z/t/x/193261-9-puma-white-peacoat-original-imafkdp2yzuxjpqr.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.056" endtime="20191007 11:00:08.062"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.063" endtime="20191007 11:00:08.063"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.063" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.062" endtime="20191007 11:00:08.063"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.064" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/k0mqtu80/shoe/z/t/x/193261-9-puma-white-peacoat-original-imafkdp2yzuxjpqr.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.064" endtime="20191007 11:00:08.064"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.064" endtime="20191007 11:00:08.065"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.055" endtime="20191007 11:00:08.065"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;853ac85a-1aea-4aea-a5bc-8832c018b79f&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.071" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jqy3dzk0/shoe/m/q/q/tr-110-445-104-7-chevit-blue-black-original-imafcsg3rggyvmnq.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.065" endtime="20191007 11:00:08.072"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.072" endtime="20191007 11:00:08.073"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.073" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.072" endtime="20191007 11:00:08.073"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.074" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jqy3dzk0/shoe/m/q/q/tr-110-445-104-7-chevit-blue-black-original-imafcsg3rggyvmnq.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.073" endtime="20191007 11:00:08.074"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.074" endtime="20191007 11:00:08.074"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.065" endtime="20191007 11:00:08.074"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;ef6b4e84-4579-4e32-8579-2d3cc656c898&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.081" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jxdkpzk0/shoe/u/d/g/pn-157-110-158-104-109-7-chevit-multicolor-original-imafhu8ghaukjtpe.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.075" endtime="20191007 11:00:08.081"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.082" endtime="20191007 11:00:08.082"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.082" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.081" endtime="20191007 11:00:08.082"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.083" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jxdkpzk0/shoe/u/d/g/pn-157-110-158-104-109-7-chevit-multicolor-original-imafhu8ghaukjtpe.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.082" endtime="20191007 11:00:08.083"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.083" endtime="20191007 11:00:08.083"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.075" endtime="20191007 11:00:08.084"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;db529b73-973b-4eaf-9ae3-b20c29a60773&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.090" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jvcp9jk0/shoe/g/a/r/cb-1110-1098-10-privifashion-navy-blue-original-imaf8dv5zaadhthf.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.084" endtime="20191007 11:00:08.090"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.091" endtime="20191007 11:00:08.091"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.091" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.090" endtime="20191007 11:00:08.091"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.092" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jvcp9jk0/shoe/g/a/r/cb-1110-1098-10-privifashion-navy-blue-original-imaf8dv5zaadhthf.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.092" endtime="20191007 11:00:08.092"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.092" endtime="20191007 11:00:08.093"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.084" endtime="20191007 11:00:08.093"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;da4aff7a-0f3e-4821-beb3-25bcd8ffe034&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.099" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/j7w813k0/shoe/b/w/y/150760c-9-converse-optical-white-original-imaeyywhkefebjpv.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.093" endtime="20191007 11:00:08.099"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.100" endtime="20191007 11:00:08.100"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.100" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.099" endtime="20191007 11:00:08.100"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.101" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/j7w813k0/shoe/b/w/y/150760c-9-converse-optical-white-original-imaeyywhkefebjpv.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.101" endtime="20191007 11:00:08.101"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.101" endtime="20191007 11:00:08.101"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.093" endtime="20191007 11:00:08.102"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;6666681d-11bb-4967-8ac2-49056d563e0a&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.108" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/k0h12fk0/shoe/s/q/z/1310-blck-8-t-rock-black-original-imafk963jsgkwcmt.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.102" endtime="20191007 11:00:08.108"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.109" endtime="20191007 11:00:08.109"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.109" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.108" endtime="20191007 11:00:08.110"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.110" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/k0h12fk0/shoe/s/q/z/1310-blck-8-t-rock-black-original-imafk963jsgkwcmt.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.110" endtime="20191007 11:00:08.110"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.111" endtime="20191007 11:00:08.111"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.102" endtime="20191007 11:00:08.112"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;d13a90e8-3a3d-4c50-bfce-fb320f24beef&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.119" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jao8uq80/shoe/3/r/q/sm323-9-sparx-white-original-imaezvxwmp6qz6tg.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.112" endtime="20191007 11:00:08.119"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.120" endtime="20191007 11:00:08.120"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.121" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.119" endtime="20191007 11:00:08.121"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.122" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jao8uq80/shoe/3/r/q/sm323-9-sparx-white-original-imaezvxwmp6qz6tg.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.121" endtime="20191007 11:00:08.122"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.122" endtime="20191007 11:00:08.123"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.112" endtime="20191007 11:00:08.123"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;6a013a8b-7ce2-45df-8891-c0c57a5e4380&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.130" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jmmce4w0/shoe/2/t/q/sx0124l-4-sparx-greypink-original-imaf9gw4myc2mbxb.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.123" endtime="20191007 11:00:08.130"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.131" endtime="20191007 11:00:08.131"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.131" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.130" endtime="20191007 11:00:08.131"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.132" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jmmce4w0/shoe/2/t/q/sx0124l-4-sparx-greypink-original-imaf9gw4myc2mbxb.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.131" endtime="20191007 11:00:08.132"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.132" endtime="20191007 11:00:08.132"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.123" endtime="20191007 11:00:08.132"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;98649293-920d-400a-8eaf-2535320258e6&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.139" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jvmpci80/shoe/g/d/y/cl4154-10-adidas-cblack-ftwwht-original-imafghjrg37vfzxc.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.133" endtime="20191007 11:00:08.139"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.140" endtime="20191007 11:00:08.140"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.140" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.139" endtime="20191007 11:00:08.140"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.141" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jvmpci80/shoe/g/d/y/cl4154-10-adidas-cblack-ftwwht-original-imafghjrg37vfzxc.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.140" endtime="20191007 11:00:08.141"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.141" endtime="20191007 11:00:08.142"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.132" endtime="20191007 11:00:08.142"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;8dfce133-ce79-4500-81cb-3fff6ef6b558&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.148" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/k0mqtu80/shoe/v/x/h/193261-9-puma-black-white-original-imafkdp2yrmzzdb5.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.142" endtime="20191007 11:00:08.148"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.149" endtime="20191007 11:00:08.149"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.149" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.148" endtime="20191007 11:00:08.149"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.150" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/k0mqtu80/shoe/v/x/h/193261-9-puma-black-white-original-imafkdp2yrmzzdb5.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.150" endtime="20191007 11:00:08.150"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.150" endtime="20191007 11:00:08.151"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.142" endtime="20191007 11:00:08.151"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;49930917-3648-4dbe-9f29-2d4bbd1a7d29&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.157" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jza5uvk0/shoe/g/k/5/838937-001-8-nike-black-black-black-original-imafjbzswyfpqfzw.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.151" endtime="20191007 11:00:08.157"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.158" endtime="20191007 11:00:08.158"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.158" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.158" endtime="20191007 11:00:08.158"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.159" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jza5uvk0/shoe/g/k/5/838937-001-8-nike-black-black-black-original-imafjbzswyfpqfzw.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.159" endtime="20191007 11:00:08.159"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.159" endtime="20191007 11:00:08.160"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.151" endtime="20191007 11:00:08.160"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;e230ae2b-d666-422e-a08a-151c74bd5648&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.166" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jy1v7gw0/shoe/x/z/j/wndr-13cblkrd-12-asian-black-red-original-imaenr72ttddwgwh.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.160" endtime="20191007 11:00:08.166"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.167" endtime="20191007 11:00:08.167"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.167" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.166" endtime="20191007 11:00:08.167"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.168" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jy1v7gw0/shoe/x/z/j/wndr-13cblkrd-12-asian-black-red-original-imaenr72ttddwgwh.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.167" endtime="20191007 11:00:08.168"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.168" endtime="20191007 11:00:08.168"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.160" endtime="20191007 11:00:08.169"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;39f850be-f874-4d77-9c53-67ce67c4bde0&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.184" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jthjki80/shoe/p/u/g/504-7-aatoot-black-original-imafc8qsjtsc39yb.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.169" endtime="20191007 11:00:08.184"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.185" endtime="20191007 11:00:08.186"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.189" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.185" endtime="20191007 11:00:08.189"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.193" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jthjki80/shoe/p/u/g/504-7-aatoot-black-original-imafc8qsjtsc39yb.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.193" endtime="20191007 11:00:08.194"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.194" endtime="20191007 11:00:08.195"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.169" endtime="20191007 11:00:08.195"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;721b6d79-65a2-4a2c-92f2-565f555ed343&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.206" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jq6y0sw0/shoe/v/8/q/5g-567-blu-wht-6-campus-blue-original-imafc8k4wqry7pps.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.195" endtime="20191007 11:00:08.207"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.207" endtime="20191007 11:00:08.208"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.208" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.207" endtime="20191007 11:00:08.208"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.209" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jq6y0sw0/shoe/v/8/q/5g-567-blu-wht-6-campus-blue-original-imafc8k4wqry7pps.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.209" endtime="20191007 11:00:08.209"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.210" endtime="20191007 11:00:08.210"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.195" endtime="20191007 11:00:08.210"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;fb6422a4-d4cc-46e3-9d8f-1fcf4947a9c9&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.219" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/shoe/h/m/g/blue-283-sparx-6-original-imaezu7myb3gsgyf.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.211" endtime="20191007 11:00:08.220"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.220" endtime="20191007 11:00:08.221"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.221" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.220" endtime="20191007 11:00:08.221"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.222" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/shoe/h/m/g/blue-283-sparx-6-original-imaezu7myb3gsgyf.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.222" endtime="20191007 11:00:08.222"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.223" endtime="20191007 11:00:08.223"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.211" endtime="20191007 11:00:08.223"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;e4b2ec4e-012f-40cc-b41f-453d844e7975&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.230" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jj0bbm80/shoe/u/g/k/mrj857-7-aadi-blue-original-imaf6nujwtwnhzzj.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.224" endtime="20191007 11:00:08.230"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.231" endtime="20191007 11:00:08.232"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.232" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.230" endtime="20191007 11:00:08.232"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.233" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jj0bbm80/shoe/u/g/k/mrj857-7-aadi-blue-original-imaf6nujwtwnhzzj.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.233" endtime="20191007 11:00:08.233"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.234" endtime="20191007 11:00:08.234"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.224" endtime="20191007 11:00:08.234"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;56550910-ab8d-4fa3-b765-559241d32555&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.241" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/juzuavk0/shoe/q/t/x/5g-562-6-campus-blu-red-original-imaffz8skv7gpzrp.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.235" endtime="20191007 11:00:08.241"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.242" endtime="20191007 11:00:08.242"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.243" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.241" endtime="20191007 11:00:08.243"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.244" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/juzuavk0/shoe/q/t/x/5g-562-6-campus-blu-red-original-imaffz8skv7gpzrp.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.243" endtime="20191007 11:00:08.244"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.244" endtime="20191007 11:00:08.245"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.235" endtime="20191007 11:00:08.245"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;ebfabc27-1d1d-4b61-acd8-3397393fd8ab&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.251" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jwnusnk0/shoe/r/p/h/coscocnblue-11-asian-blue-original-imafhazbzxxhg6fz.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.245" endtime="20191007 11:00:08.251"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.252" endtime="20191007 11:00:08.252"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.252" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.251" endtime="20191007 11:00:08.252"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.253" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jwnusnk0/shoe/r/p/h/coscocnblue-11-asian-blue-original-imafhazbzxxhg6fz.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.253" endtime="20191007 11:00:08.253"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.253" endtime="20191007 11:00:08.254"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.245" endtime="20191007 11:00:08.254"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;bc966c84-5654-4932-9169-70deaa2d3584&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.259" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/k0e66q80/shoe/y/z/x/cf001-6-aadi-black-original-imafjh4bfabbtczt.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.254" endtime="20191007 11:00:08.259"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.260" endtime="20191007 11:00:08.260"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.260" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.259" endtime="20191007 11:00:08.261"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.261" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/k0e66q80/shoe/y/z/x/cf001-6-aadi-black-original-imafjh4bfabbtczt.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.261" endtime="20191007 11:00:08.261"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.261" endtime="20191007 11:00:08.262"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.254" endtime="20191007 11:00:08.262"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;7eec5dde-b47d-41a9-b92c-2c9865407355&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.267" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jfzpuvk0/shoe/c/y/a/ax-002-6-adza-grey-original-imaf4c5khcx8df5y.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.262" endtime="20191007 11:00:08.267"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.268" endtime="20191007 11:00:08.268"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.268" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.268" endtime="20191007 11:00:08.269"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.269" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jfzpuvk0/shoe/c/y/a/ax-002-6-adza-grey-original-imaf4c5khcx8df5y.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.269" endtime="20191007 11:00:08.269"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.269" endtime="20191007 11:00:08.270"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.262" endtime="20191007 11:00:08.270"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;6ddb535e-a7b5-45e9-9d8d-96131942388e&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.275" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jve4pe80/shoe/s/k/a/574236-018-7-nike-black-white-original-imafgb2hxbgevrfk.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.270" endtime="20191007 11:00:08.275"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.276" endtime="20191007 11:00:08.276"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.276" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.276" endtime="20191007 11:00:08.276"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.277" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jve4pe80/shoe/s/k/a/574236-018-7-nike-black-white-original-imafgb2hxbgevrfk.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.277" endtime="20191007 11:00:08.277"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.277" endtime="20191007 11:00:08.278"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.270" endtime="20191007 11:00:08.278"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;b795961c-8b87-4c10-b365-34926526272a&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.283" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jtkeg7k0/shoe/x/h/z/307-43-restinfoot-grey-original-imafeuvuqnpkawgk.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.278" endtime="20191007 11:00:08.283"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.284" endtime="20191007 11:00:08.284"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.284" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.284" endtime="20191007 11:00:08.285"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.285" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jtkeg7k0/shoe/x/h/z/307-43-restinfoot-grey-original-imafeuvuqnpkawgk.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.285" endtime="20191007 11:00:08.285"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.286" endtime="20191007 11:00:08.286"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.278" endtime="20191007 11:00:08.286"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;e7e7a3cd-09ff-46f1-b0e7-21baacac3fc5&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.291" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jmgmmq80/shoe/m/q/w/cb-427-303-8-pexlo-brown-black-original-imaf98tg63bxpqca.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.287" endtime="20191007 11:00:08.291"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.292" endtime="20191007 11:00:08.292"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.293" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.292" endtime="20191007 11:00:08.293"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.293" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jmgmmq80/shoe/m/q/w/cb-427-303-8-pexlo-brown-black-original-imaf98tg63bxpqca.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.293" endtime="20191007 11:00:08.293"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.293" endtime="20191007 11:00:08.294"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.286" endtime="20191007 11:00:08.294"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;66a66f85-4627-4597-8de3-97be5e1b5eb6&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.299" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jnt7low0/shoe/b/7/u/combo-er-1077-349-10-earton-multicolor-original-imafaeq687rqwevd.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.294" endtime="20191007 11:00:08.299"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.300" endtime="20191007 11:00:08.300"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.300" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.300" endtime="20191007 11:00:08.300"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.301" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jnt7low0/shoe/b/7/u/combo-er-1077-349-10-earton-multicolor-original-imafaeq687rqwevd.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.301" endtime="20191007 11:00:08.301"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.301" endtime="20191007 11:00:08.302"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.294" endtime="20191007 11:00:08.302"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;71fc00fe-75d5-4370-9fd3-038e14115135&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.308" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/shoe/9/b/b/t-blue-orange-sc0283g-sm-283-sparx-8-original-imaepjnnj3wyracm.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.302" endtime="20191007 11:00:08.308"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.309" endtime="20191007 11:00:08.310"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.310" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.309" endtime="20191007 11:00:08.310"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.311" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/shoe/9/b/b/t-blue-orange-sc0283g-sm-283-sparx-8-original-imaepjnnj3wyracm.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.310" endtime="20191007 11:00:08.311"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.312" endtime="20191007 11:00:08.312"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.302" endtime="20191007 11:00:08.313"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;a121a240-0461-4834-94bc-1193897570f1&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.323" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jzsqky80/shoe/z/h/h/898484-602-5-nike-echo-pink-light-redwood-pink-quartz-original-imafjqrjfbsfxppc.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.313" endtime="20191007 11:00:08.323"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.324" endtime="20191007 11:00:08.325"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.325" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.324" endtime="20191007 11:00:08.325"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.326" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jzsqky80/shoe/z/h/h/898484-602-5-nike-echo-pink-light-redwood-pink-quartz-original-imafjqrjfbsfxppc.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.325" endtime="20191007 11:00:08.326"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.326" endtime="20191007 11:00:08.327"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.313" endtime="20191007 11:00:08.327"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;c8fef784-860e-4c29-8a77-fb17dbed0398&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.336" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/k01b8280/shoe/z/e/u/sm421-11-sparx-navygrey-original-imafgkg5v7fzjn78.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.327" endtime="20191007 11:00:08.336"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.336" endtime="20191007 11:00:08.337"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.337" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.336" endtime="20191007 11:00:08.337"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.338" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/k01b8280/shoe/z/e/u/sm421-11-sparx-navygrey-original-imafgkg5v7fzjn78.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.337" endtime="20191007 11:00:08.338"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.338" endtime="20191007 11:00:08.338"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.327" endtime="20191007 11:00:08.338"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;bba76dfd-a5a8-4d91-bc04-575866392755&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.345" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jn0msnk0/shoe/3/n/t/11006401-fw-18-7-fila-blk-chn-rd-original-imaf9s6pn8c845yd.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.339" endtime="20191007 11:00:08.345"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.345" endtime="20191007 11:00:08.346"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.346" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.345" endtime="20191007 11:00:08.346"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.347" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jn0msnk0/shoe/3/n/t/11006401-fw-18-7-fila-blk-chn-rd-original-imaf9s6pn8c845yd.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.346" endtime="20191007 11:00:08.347"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.347" endtime="20191007 11:00:08.347"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.339" endtime="20191007 11:00:08.347"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;22746a43-1f67-4fcf-a32d-53342bf78323&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.353" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jqjszgw0/shoe/g/h/7/5g-562-10-campus-blk-tblu-original-imafcdzghpj5fezg.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.348" endtime="20191007 11:00:08.354"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.354" endtime="20191007 11:00:08.355"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.355" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.354" endtime="20191007 11:00:08.355"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.356" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jqjszgw0/shoe/g/h/7/5g-562-10-campus-blk-tblu-original-imafcdzghpj5fezg.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.355" endtime="20191007 11:00:08.356"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.356" endtime="20191007 11:00:08.357"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.348" endtime="20191007 11:00:08.357"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;ccfa470c-c07e-4e04-aed5-3ffa5884e6ff&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.365" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/jvv9zm80/shoe/s/3/4/cl4155-7-0-adidas-conavy-silvmt-trublu-original-imafgk48m2bwyurt.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.357" endtime="20191007 11:00:08.365"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.366" endtime="20191007 11:00:08.366"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.366" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.365" endtime="20191007 11:00:08.366"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.367" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/jvv9zm80/shoe/s/3/4/cl4155-7-0-adidas-conavy-silvmt-trublu-original-imafgk48m2bwyurt.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.366" endtime="20191007 11:00:08.367"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.367" endtime="20191007 11:00:08.368"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.357" endtime="20191007 11:00:08.368"></status>
+</kw>
+<kw name="${item} = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;20351b23429eefb506dd471a47b2affd&quot;, element=&quot;84533913-e202-4c11-8502-618793c8d559&quot;)&gt;" type="foritem">
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>${Src}</arg>
+</arguments>
+<assign>
+<var>${GetSrc}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.377" level="INFO">${GetSrc} = https://rukminim1.flixcart.com/image/330/396/j9d3bm80/shoe/q/a/y/150764c-9-converse-mono-black-original-imaez6hheuh3vfxj.jpeg?q=50</msg>
+<status status="PASS" starttime="20191007 11:00:08.368" endtime="20191007 11:00:08.377"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.378" endtime="20191007 11:00:08.378"></status>
+</kw>
+<msg timestamp="20191007 11:00:08.379" level="INFO">${result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:08.378" endtime="20191007 11:00:08.379"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${GetSrc}</arg>
+<arg>${Assertion1}</arg>
+</arguments>
+<assign>
+<var>${msg}</var>
+</assign>
+<msg timestamp="20191007 11:00:08.379" level="INFO">${msg} = https://rukminim1.flixcart.com/image/330/396/j9d3bm80/shoe/q/a/y/150764c-9-converse-mono-black-original-imaez6hheuh3vfxj.jpeg?q=50 is not a Shoe</msg>
+<status status="PASS" starttime="20191007 11:00:08.379" endtime="20191007 11:00:08.379"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${result}==False</arg>
+<arg>Fail</arg>
+<arg>${msg}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.380" endtime="20191007 11:00:08.380"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.368" endtime="20191007 11:00:08.380"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:07.954" endtime="20191007 11:00:08.380"></status>
+</kw>
+<status status="PASS" starttime="20191007 10:59:49.508" endtime="20191007 11:00:08.381"></status>
+</kw>
+<status status="PASS" starttime="20191007 10:59:49.507" endtime="20191007 11:00:08.381" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t2" name="Flipkart Webpage Filter Validation">
+<kw name="Apply Filters on Price and Brand" library="ApplyFilter">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${PriceFilterClass}</arg>
+<arg>5</arg>
+<arg>${Error1}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:08.383" endtime="20191007 11:00:08.408"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${PriceMaxFilter}</arg>
+<arg>${PriceMaxValue}</arg>
+</arguments>
+<msg timestamp="20191007 11:00:08.409" level="INFO">Selecting options from selection list '//*[@class='_1YoBfV']//*[@class='fPjUPw']' by value 2000.</msg>
+<status status="PASS" starttime="20191007 11:00:08.409" endtime="20191007 11:00:08.582"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20191007 11:00:13.583" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20191007 11:00:08.582" endtime="20191007 11:00:13.583"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20191007 11:00:13.962" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20191007 11:00:13.583" endtime="20191007 11:00:13.962"></status>
+</kw>
+<kw name="Get WebElement" library="Selenium2Library">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>${BrandFilter}</arg>
+</arguments>
+<assign>
+<var>${checkbox}</var>
+</assign>
+<msg timestamp="20191007 11:00:13.977" level="INFO">${checkbox} = &lt;selenium.webdriver.remote.webelement.WebElement (session="20351b23429eefb506dd471a47b2affd", element="c1669176-adef-4856-9a9b-cb385f26f728")&gt;</msg>
+<status status="PASS" starttime="20191007 11:00:13.962" endtime="20191007 11:00:13.977"></status>
+</kw>
+<kw name="Select Checkbox" library="Selenium2Library">
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>${checkbox}</arg>
+</arguments>
+<msg timestamp="20191007 11:00:13.978" level="INFO">Selecting checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="20351b23429eefb506dd471a47b2affd", element="c1669176-adef-4856-9a9b-cb385f26f728")&gt;'.</msg>
+<status status="PASS" starttime="20191007 11:00:13.978" endtime="20191007 11:00:14.112"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Filter1Xpath}</arg>
+</arguments>
+<assign>
+<var>${Filter1Text}</var>
+</assign>
+<msg timestamp="20191007 11:00:14.148" level="INFO">${Filter1Text} = Min-₹2000</msg>
+<status status="PASS" starttime="20191007 11:00:14.113" endtime="20191007 11:00:14.148"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Filter2Xpath}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:14.148" endtime="20191007 11:00:14.415"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Filter2Xpath}</arg>
+</arguments>
+<assign>
+<var>${Filter2Text}</var>
+</assign>
+<msg timestamp="20191007 11:00:14.440" level="INFO">${Filter2Text} = ADIDAS</msg>
+<status status="PASS" starttime="20191007 11:00:14.415" endtime="20191007 11:00:14.440"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20191007 11:00:14.806" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20191007 11:00:14.440" endtime="20191007 11:00:14.806"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Be Equal As Strings</arg>
+<arg>${Filter1Text}</arg>
+<arg>${Assertion2Data}</arg>
+</arguments>
+<assign>
+<var>${Filter1result}</var>
+</assign>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${Filter1Text}</arg>
+<arg>${Assertion2Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:14.807" endtime="20191007 11:00:14.807"></status>
+</kw>
+<msg timestamp="20191007 11:00:14.807" level="INFO">${Filter1result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:14.806" endtime="20191007 11:00:14.807"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Be Equal As Strings</arg>
+<arg>${Filter2Text}</arg>
+<arg>${Assertion3Data}</arg>
+</arguments>
+<assign>
+<var>${Filter2result}</var>
+</assign>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${Filter2Text}</arg>
+<arg>${Assertion3Data}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:14.808" endtime="20191007 11:00:14.808"></status>
+</kw>
+<msg timestamp="20191007 11:00:14.808" level="INFO">${Filter2result} = True</msg>
+<status status="PASS" starttime="20191007 11:00:14.807" endtime="20191007 11:00:14.808"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${Filter1result}==False</arg>
+<arg>Fail</arg>
+<arg>${Assertion2}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:14.809" endtime="20191007 11:00:14.809"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${Filter2result}==False</arg>
+<arg>Fail</arg>
+<arg>${Assertion3}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:14.809" endtime="20191007 11:00:14.809"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.382" endtime="20191007 11:00:14.810"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:08.382" endtime="20191007 11:00:14.810" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t3" name="Flipkart Webpage Product Selection Validation">
+<kw name="Product Selection" library="ProductDetailPage">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Product}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:14.811" endtime="20191007 11:00:14.836"></status>
+</kw>
+<kw name="Get WebElement" library="Selenium2Library">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>${Product}</arg>
+</arguments>
+<assign>
+<var>${Product_Selection}</var>
+</assign>
+<msg timestamp="20191007 11:00:14.845" level="INFO">${Product_Selection} = &lt;selenium.webdriver.remote.webelement.WebElement (session="20351b23429eefb506dd471a47b2affd", element="cc4118a4-0499-470a-a28f-2191099653c5")&gt;</msg>
+<status status="PASS" starttime="20191007 11:00:14.836" endtime="20191007 11:00:14.845"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Product_Selection}</arg>
+</arguments>
+<msg timestamp="20191007 11:00:14.846" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="20351b23429eefb506dd471a47b2affd", element="cc4118a4-0499-470a-a28f-2191099653c5")&gt;'.</msg>
+<status status="PASS" starttime="20191007 11:00:14.845" endtime="20191007 11:00:14.932"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20191007 11:00:15.386" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20191007 11:00:14.933" endtime="20191007 11:00:15.387"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>DEPRECATED in Selenium2Library 4.0. , use `Switch Window` instead.</doc>
+<arguments>
+<arg>NEW</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:15.387" endtime="20191007 11:00:16.620"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ProductSize}</arg>
+<arg>5</arg>
+<arg>${Error2}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:16.621" endtime="20191007 11:00:17.219"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ProductSize}</arg>
+</arguments>
+<msg timestamp="20191007 11:00:17.219" level="INFO">Clicking element 'id=swatch-1-size'.</msg>
+<status status="PASS" starttime="20191007 11:00:17.219" endtime="20191007 11:00:18.059"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20191007 11:00:18.524" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20191007 11:00:18.059" endtime="20191007 11:00:18.524"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${BuyNow}</arg>
+<arg>5</arg>
+<arg>${Error3}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:18.524" endtime="20191007 11:00:18.550"></status>
+</kw>
+<kw name="Get WebElement" library="Selenium2Library">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>${BuyNow}</arg>
+</arguments>
+<assign>
+<var>${Buy}</var>
+</assign>
+<msg timestamp="20191007 11:00:18.558" level="INFO">${Buy} = &lt;selenium.webdriver.remote.webelement.WebElement (session="20351b23429eefb506dd471a47b2affd", element="f553728c-9942-43d1-acb1-813a4962696c")&gt;</msg>
+<status status="PASS" starttime="20191007 11:00:18.551" endtime="20191007 11:00:18.558"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Buy}</arg>
+</arguments>
+<msg timestamp="20191007 11:00:18.559" level="INFO">Clicking button '&lt;selenium.webdriver.remote.webelement.WebElement (session="20351b23429eefb506dd471a47b2affd", element="f553728c-9942-43d1-acb1-813a4962696c")&gt;'.</msg>
+<status status="PASS" starttime="20191007 11:00:18.559" endtime="20191007 11:00:18.616"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20191007 11:00:19.074" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20191007 11:00:18.617" endtime="20191007 11:00:19.074"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Login}</arg>
+</arguments>
+<status status="PASS" starttime="20191007 11:00:19.074" endtime="20191007 11:00:25.142"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20191007 11:00:25.548" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20191007 11:00:25.143" endtime="20191007 11:00:25.548"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:14.811" endtime="20191007 11:00:25.548"></status>
+</kw>
+<status status="PASS" starttime="20191007 11:00:14.810" endtime="20191007 11:00:25.549" critical="yes"></status>
+</test>
+<doc>Tests to validate Flipkart webpage
+Shoe Search: The products on the search page are verified as shoes
+Apply Filters: The Price filter and Brand filter selected are ensured as Min-₹2000 and ADIDAS respectively.
+Product Detail Page: First product on the search page along with a valid size is selected to buy.
+Selected product is also verified for valid size and In Stock.
+UTF-8 encoding type is used for this source file.</doc>
+<metadata>
+<item name="Version">1.0</item>
+</metadata>
+<status status="PASS" starttime="20191007 10:59:49.236" endtime="20191007 11:00:25.549"></status>
+</suite>
+<status status="PASS" starttime="20191007 10:59:49.234" endtime="20191007 11:00:25.553"></status>
+</suite>
+<status status="PASS" starttime="20191007 10:59:49.211" endtime="20191007 11:00:25.555"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="Flipkart Testing">Flipkart Testing</stat>
+<stat pass="3" fail="0" id="s1-s1" name="Script">Flipkart Testing.Script</stat>
+<stat pass="3" fail="0" id="s1-s1-s1" name="FlipkartValidation">Flipkart Testing.Script.FlipkartValidation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
