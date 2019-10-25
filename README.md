@@ -25,6 +25,14 @@ Flipkart Shoe Search and Buy Testing
     5.Run the project as robot test.
 	6.Resource files and yaml file are UTF-8 encoded
 
+#Problem Statement
+
+	1.  Search - open www.flipkart.com. The Login popup is cancelled, a search operation for term 'shoes' is performed and the values on the search page is actually a search for shoes is verified. 
+
+	2. Apply Filters - Applying two filters - eg - price & brand. Ensure the filters are selected. 
+
+	3. Product Detail Page - The detail page of the first result is opened, size of the item is selected & then'buy now' is clicked. We should be on login page now. 
+
 #Resource Files
     
 	ApplyFilter.robot
